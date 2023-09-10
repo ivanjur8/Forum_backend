@@ -19,7 +19,6 @@ class NapraviTablicuStudenti extends Migration
             $table->string("prezime");
             $table->string("email")-> unique();
             $table->string("lozinka");
-            $table->enum("vrsta_korisnika",["admin","profesor","ucenik"]);
             $table->timestamps();
         });
     }

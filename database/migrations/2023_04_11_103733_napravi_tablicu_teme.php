@@ -17,8 +17,8 @@ class NapraviTablicuTeme extends Migration
             $table->id();
             $table->string("naziv");
             $table->text("opis");
-            $table->foreignId('student_id')->constrained('studenti');
-            $table->foreignId('predmet_id')->constrained('predmeti');
+            $table->foreignId('student_id')->constrained('studenti')->nullable();
+            $table->foreignId('predmet_id')->constrained('predmeti')->nullable();
             $table->timestamps();
         });
     }
